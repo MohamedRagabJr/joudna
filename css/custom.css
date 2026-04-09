@@ -1,8 +1,4 @@
 /* ----------------------------------------------------------------------------------------
-* Author        : Awaiken
-* Template Name : Roast - Coffee Shop & Cafe HTML Template
-* File          : CSS File
-* Version       : 1.0
 * ---------------------------------------------------------------------------------------- */
 /* INDEX
 ----------------------------------------------------------------------------------------
@@ -241,8 +237,8 @@ body {
 
 .btn-default.btn-highlighted {
   background: transparent;
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
+  border: 1px solid var(--accent-secondary-color);
+  color: var(--accent-secondary-color);
   padding: 16px 30px;
 }
 
@@ -734,52 +730,12 @@ header.main-header .header-sticky.active {
   align-items: center;
 }
 
-.header-sidebar-btn .btn-popup {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  z-index: 100;
-}
-
-.header-sidebar-btn .offcanvas-backdrop {
-  z-index: 100;
-}
-
-.header-sidebar-btn .btn-popup {
-  padding: 0;
-  margin-left: 40px;
-  border: none;
-}
-
-.header-sidebar-btn .btn-popup img {
-  max-width: 36px;
-}
-
 body:has(:not(.offcanvas)) {
   padding-right: initial !important;
 }
 
 body:has(.offcanvas) {
   padding-right: 0 !important;
-}
-
-.header-sidebar-btn .offcanvas {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: auto;
-  right: -15px;
-  background: var(--primary-color) !important;
-  border-radius: 0;
-  opacity: 100%;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 650px;
-  border: none;
-  padding: 200px 130px 60px;
-  transform: translateX(100%) !important;
-  z-index: 101;
-  transition: all 0.3s ease-in-out !important;
 }
 
 .offcanvas.show:not(.hiding),
@@ -790,27 +746,6 @@ body:has(.offcanvas) {
 .navbar-expand-lg .offcanvas .offcanvas-body {
   text-align: center;
   display: block;
-}
-
-.header-sidebar-btn .offcanvas .btn-close {
-  position: absolute;
-  top: 60px;
-  right: 60px;
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 100%;
-  box-shadow: none;
-  padding: 0;
-  transition: all 0.4s ease-in-out;
-}
-
-.header-sidebar-btn .offcanvas .btn-close:hover {
-  background-color: var(--accent-secondary-color);
 }
 
 .header-title-box,
@@ -1064,9 +999,7 @@ body:has(.offcanvas) {
 
 .hero {
   position: relative;
-  background: url("../images/hero-bg.jpg") no-repeat;
-  background-position: center center;
-  background-size: auto;
+
   padding: 210px 0;
 }
 
@@ -1103,79 +1036,60 @@ body:has(.offcanvas) {
   padding: 0;
 }
 
-.hero.hero-slider-layout .hero-slide {
-  position: relative;
-  background: url("../images/hero-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 210px 0;
-}
-
-.hero.hero-slider-layout .hero-slide.slide-2 {
-  background: url("../images/hero-bg-2.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.hero.hero-slider-layout .hero-slide::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: var(--secondary-color);
-  opacity: 80%;
-  z-index: 1;
-}
-
-.hero.hero-slider-layout .hero-slide .hero-slider-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
-.hero.hero-slider-layout .hero-slide .hero-slider-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero.hero-slider-layout .hero-pagination {
-  position: absolute;
-  bottom: 50px;
-  padding-left: calc(((100vw - 1300px) / 2) + 15px);
-  z-index: 2;
-}
-
-.hero.hero-slider-layout .hero-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background: var(--divider-color);
-  opacity: 1;
-  transition: all 0.3s ease-in-out;
-  margin: 0 5px;
-}
-
-.hero.hero-slider-layout .hero-pagination .swiper-pagination-bullet-active {
-  background: var(--accent-color);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
 .hero-btn {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
+/* Image */
+.hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.hero-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--main-color);
+  opacity: 60%;
+  z-index: 1;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-desc {
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 15px;
+}
 /************************************/
 /***   05. Scrolling Ticker css   ***/
 /************************************/
@@ -1609,7 +1523,7 @@ body:has(.offcanvas) {
 .intro-video {
   position: relative;
   padding: 200px 0 100px;
-  background-image: url("../images/intro-video-bg.jpg");
+  background-image: url("../images/bg/bg1.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2458,7 +2372,7 @@ body:has(.offcanvas) {
 
 .main-footer {
   position: relative;
-  background: url(../images/footer-bg-image.jpg) no-repeat;
+  background: url(../images/hero/4.jpg) no-repeat;
   background-position: center center;
   background-size: cover;
   padding: 100px 0 0;
@@ -2581,7 +2495,7 @@ body:has(.offcanvas) {
 
 .footer-social-links ul li a {
   color: var(--primary-color);
-  background-color: var(--accent-color);
+  background-color: var(--main-color);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -2607,7 +2521,7 @@ body:has(.offcanvas) {
 
 .page-header {
   position: relative;
-  background-image: url("../images/page-header-bg.jpg");
+  background-image: url("../images/hero/4.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -4622,6 +4536,9 @@ body:has(.offcanvas) {
   .btn-default {
     padding: 15px 20px;
   }
+  .header-sidebar-btn {
+    display: block;
+  }
 
   .btn-default.btn-highlighted {
     padding: 14px 20px;
@@ -4660,10 +4577,6 @@ body:has(.offcanvas) {
   .responsive-menu,
   .navbar-toggle {
     display: block;
-  }
-
-  .header-sidebar-btn {
-    display: none;
   }
 
   .section-row {
