@@ -334,9 +334,9 @@ body {
 
 .loading-container,
 .loading {
-  height: 100px;
+  height: 300px;
   position: relative;
-  width: 100px;
+  width: 300px;
   border-radius: 100%;
 }
 
@@ -346,8 +346,7 @@ body {
 
 .loading {
   border: 1px solid transparent;
-  border-color: transparent var(--secondary-color) transparent
-    var(--secondary-color);
+  border-color: transparent var(--main-color) transparent var(--main-color);
   animation: rotate-loading 1.5s linear 0s infinite normal;
   transform-origin: 50% 50%;
 }
@@ -361,10 +360,12 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 66px;
+  max-width: 300px;
   transform: translate(-50%, -50%);
 }
-
+#loading-icon img {
+  width: 300px;
+}
 @keyframes rotate-loading {
   0% {
     transform: rotate(0deg);
@@ -447,10 +448,12 @@ body {
   background-size: cover;
   width: 20px;
   height: 20px;
-  filter: brightness(0) saturate(100%) invert(7%) sepia(71%) saturate(3500%)
+ 
+}
+.why-choose-us .section-title h3::before{
+   filter: brightness(0) saturate(100%) invert(7%) sepia(71%) saturate(3500%)
     hue-rotate(305deg) brightness(75%) contrast(105%);
 }
-
 .section-title h1 {
   font-family: var(--accent-font);
   font-size: 70px;
@@ -596,7 +599,7 @@ header.main-header .header-sticky.active {
   right: 0;
   border-radius: 0;
   /* transform: translateY(0); */
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
   border-bottom: 1px solid var(--divider-color);
 }
 
@@ -610,7 +613,7 @@ header.main-header .header-sticky.active {
   margin: 0;
 }
 .navbar-brand img {
-  max-width: 120px;
+  max-width: 250px;
 }
 .main-menu .nav-menu-wrapper {
   flex: 1;
@@ -1089,6 +1092,9 @@ body:has(.offcanvas) {
 .hero-btn {
   display: flex;
   gap: 15px;
+}
+.hero .swiper-wrapper {
+  height: 85vh;
 }
 /************************************/
 /***   05. Scrolling Ticker css   ***/
@@ -1869,7 +1875,7 @@ body:has(.offcanvas) {
 
 .process-content-wap h2 {
   font-family: var(--accent-font);
-  font-size: 40px;
+  font-size: 38px;
   text-transform: uppercase;
   color: var(--primary-color);
   font-weight: 400;
@@ -2463,7 +2469,7 @@ body:has(.offcanvas) {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid var(--divider-color);
-  padding: 80px 0 100px;
+  padding: 20px 0;
   margin-top: 80px;
 }
 
@@ -2521,7 +2527,7 @@ body:has(.offcanvas) {
 
 .page-header {
   position: relative;
-  background-image: url("../images/hero/4.png");
+  background-image: url("../images/hero/br1.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -4455,21 +4461,22 @@ body:has(.offcanvas) {
 .page-book-table {
   padding: 100px 0;
 }
-
+.page-book-table .section-title h3::before{
+  filter: unset;
+}
 .book-table-image {
   margin-right: 95px;
 }
 
 .book-table-image figure {
   display: block;
-  border-radius: 400px 400px 0 0;
+  border-radius: 10px;
 }
 
 .book-table-image img {
   width: 100%;
-  aspect-ratio: 1 / 1.34;
   object-fit: cover;
-  border-radius: 400px 400px 0 0;
+  border-radius: 10px;
 }
 
 .book-table-content .section-title p b {
@@ -4546,6 +4553,9 @@ body:has(.offcanvas) {
 
   .topbar-contact-info ul {
     gap: 15px;
+  }
+  .hero .swiper-wrapper {
+    height: 25vh;
   }
 
   .topbar-contact-info ul li img {
