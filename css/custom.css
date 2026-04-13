@@ -2585,6 +2585,7 @@ body:has(.offcanvas) {
 
 .page-header-box ol .breadcrumb-item + .breadcrumb-item::before {
   color: var(--text-color);
+  content: "/";
 }
 
 .our-scrolling-ticker.subpages-scrolling-ticker {
