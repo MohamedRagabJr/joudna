@@ -1092,9 +1092,9 @@ body:has(.offcanvas) {
   display: flex;
   gap: 15px;
 }
-.hero .swiper-wrapper {
+/* .hero .swiper-wrapper {
   height: 85vh;
-}
+} */
 /************************************/
 /***   05. Scrolling Ticker css   ***/
 /************************************/
@@ -1529,7 +1529,7 @@ body:has(.offcanvas) {
 .intro-video {
   position: relative;
   padding: 200px 0 100px;
-  background-image: url("../images/bg/bg1.png");
+  background-image: url("../images/hero/6.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2378,7 +2378,7 @@ body:has(.offcanvas) {
 
 .main-footer {
   position: relative;
-  background: url(../images/hero/4.jpg) no-repeat;
+  background: url(../images/hero/footer.jpg) no-repeat;
   background-position: center center;
   background-size: cover;
   padding: 100px 0 0;
@@ -2527,7 +2527,7 @@ body:has(.offcanvas) {
 
 .page-header {
   position: relative;
-  background-image: url("../images/hero/br1.png");
+  background-image: url("../images/hero/8.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -4648,9 +4648,9 @@ body:has(.offcanvas) {
   .topbar-contact-info ul {
     gap: 15px;
   }
-  .hero .swiper-wrapper {
+  /* .hero .swiper-wrapper {
     height: 25vh;
-  }
+  } */
 
   .topbar-contact-info ul li img {
     margin-inline-end: 5px;
