@@ -4648,9 +4648,9 @@ body:has(.offcanvas) {
   .topbar-contact-info ul {
     gap: 15px;
   }
-  /* .hero .swiper-wrapper {
+  .hero .swiper-wrapper {
     height: 25vh;
-  } */
+  }
 
   .topbar-contact-info ul li img {
     margin-inline-end: 5px;
